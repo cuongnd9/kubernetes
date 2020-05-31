@@ -1,0 +1,31 @@
+version: "3.7"
+
+services:
+  node-app:
+    image: 103cuong/node-kit
+    restart: always
+    env_file: .env
+    ports:
+      - 9000:9000
+    networks:
+      - app-network
+
+  db:
+    image: postgres:10.3
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=node-app
+      - POSTGRES_USER=103cuong
+      - POSTGRES_PASSWORD=12ehudh281d194h
+    volumes:
+      - db:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+networks:
+  app-network:
+
+volumes:
+  db:
