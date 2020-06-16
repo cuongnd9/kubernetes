@@ -2,11 +2,6 @@
 
 Kubernetes from 🌱 zero to 🌲 hero
 
-<p>
-  <img src='https://github.com/103cuong/node-kit/blob/master/images/rocket-raccoon.gif' height=200 />
-  <img src='https://github.com/103cuong/node-kit/blob/master/images/joker.gif' height=200 />
-</p>
-
 ![kubernetes-architecture](./images/kubernetes-architecture.webp)
 
 ## Installation
@@ -29,3 +24,4 @@ Kubernetes from 🌱 zero to 🌲 hero
 - [How to set up a serious Kubernetes terminal](https://www.freecodecamp.org/news/how-to-set-up-a-serious-kubernetes-terminal-dd07cab51cd4/)
 - [Hands-on guide: developing and deploying Node.js apps in Kubernetes](https://learnk8s.io/nodejs-kubernetes-guide)
 - [React, Express, Node Js, and MongoDB (MERN Stack) microservices-based application deployment on Kubernetes](https://itnext.io/react-express-node-js-and-mongodb-mern-stack-microservices-based-application-deployment-on-ec4607cec74d)
+- [kompose user guide](https://github.com/kubernetes/kompose/blob/master/docs/user-guide.md)
