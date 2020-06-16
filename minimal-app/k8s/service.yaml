@@ -6,8 +6,9 @@ spec:
   selector:
     app: myapp
   ports:
-  - port: 80
+  - port: 9000
     protocol: TCP
     targetPort: 3000
+  externalTrafficPolicy: Local
   type: LoadBalancer
   
