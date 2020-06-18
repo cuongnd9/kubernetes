@@ -9,5 +9,6 @@ app.get('/', (_, res: Response) => {
   res.send('Xin chào 👋🇻🇳');
 });
 app.use('/api', apiRoute);
+app.get('/health', (req, res) => res.json({ success: true }));
 
 export default app;

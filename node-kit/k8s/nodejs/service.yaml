@@ -8,7 +8,6 @@ spec:
   ports:
   - port: 9000
     protocol: TCP
-    targetPort: 3000
+    targetPort: 9000
   externalTrafficPolicy: Local
   type: LoadBalancer
-  

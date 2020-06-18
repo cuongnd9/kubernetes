@@ -1,11 +1,8 @@
 import 'reflect-metadata';
-import dotenv from 'dotenv';
 import { createConnection } from 'typeorm';
 import http from 'http';
 import app from './app';
 import config from './components/config';
-
-dotenv.config();
 
 createConnection()
   .then((): void => {

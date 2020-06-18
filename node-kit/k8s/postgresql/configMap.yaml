@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db
+data:
+  POSTGRES_DB: node-app
+  POSTGRES_USER: 103cuong
+  POSTGRES_PASSWORD: 12ehudh281d194h
