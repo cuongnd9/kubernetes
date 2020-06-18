@@ -1,0 +1,101 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-kit
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: node-kit
+  template:
+    metadata:
+      labels:
+        app: node-kit
+    spec:
+      containers:
+      - name: node-kit
+        image: 103cuong/node-kit
+        env:
+          - name: PORT
+            valueFrom:
+              secretKeyRef:
+                name: node-kit
+                key: PORT
+          - name: DB_HOST
+            valueFrom:
+              secretKeyRef:
+                name: node-kit
+                key: DB_HOST
+          - name: DB_PORT
+            valueFrom:
+              secretKeyRef:
+                name: node-kit
+                key: DB_PORT
+          - name: DB_DATABASE
+            valueFrom:
+              secretKeyRef:
+                name: node-kit
+                key: DB_DATABASE
+          - name: DB_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: node-kit
+                key: DB_USERNAME
+          - name: TEST_DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: node-kit
+                key: TEST_DB_PASSWORD
+          - name: TEST_DB_HOST
+            valueFrom:
+              secretKeyRef:
+                name: node-kit
+                key: TEST_DB_HOST
+          - name: TEST_DB_PORT
+            valueFrom:
+              secretKeyRef:
+                name: node-kit
+                key: TEST_DB_PORT
+          - name: TEST_DB_DATABASE
+            valueFrom:
+              secretKeyRef:
+                name: node-kit
+                key: TEST_DB_DATABASE
+          - name: TEST_DB_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: node-kit
+                key: TEST_DB_USERNAME
+          - name: TEST_DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: node-kit
+                key: TEST_DB_PASSWORD
+          - name: JWT_SECRET_KEY
+            valueFrom:
+              secretKeyRef:
+                name: node-kit
+                key: JWT_SECRET_KEY
+          - name: JWT_ALGORITHM
+            valueFrom:
+              secretKeyRef:
+                name: node-kit
+                key: JWT_ALGORITHM
+          - name: JWT_EXPIRES_IN
+            valueFrom:
+              secretKeyRef:
+                name: node-kit
+                key: JWT_EXPIRES_IN
+        livenessProbe:
+            httpGet:
+              path: /health
+              port: 9000
+              scheme: HTTP
+            initialDelaySeconds: 40
+            periodSeconds: 3
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
