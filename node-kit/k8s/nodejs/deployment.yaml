@@ -2,8 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: node-kit
+  namespace: production
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: node-kit
@@ -33,19 +34,19 @@ spec:
                 key: DB_PORT
           - name: DB_DATABASE
             valueFrom:
-              secretKeyRef:
-                name: node-kit
-                key: DB_DATABASE
+              configMapKeyRef:
+                name: db
+                key: POSTGRES_DB
           - name: DB_USERNAME
             valueFrom:
               secretKeyRef:
                 name: node-kit
                 key: DB_USERNAME
-          - name: TEST_DB_PASSWORD
+          - name: DB_PASSWORD
             valueFrom:
               secretKeyRef:
                 name: node-kit
-                key: TEST_DB_PASSWORD
+                key: DB_PASSWORD
           - name: TEST_DB_HOST
             valueFrom:
               secretKeyRef:

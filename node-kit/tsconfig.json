@@ -12,7 +12,8 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
-    "sourceMap": true
+    "sourceMap": true,
+    "allowJs": true,
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]
