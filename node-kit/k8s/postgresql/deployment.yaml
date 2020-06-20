@@ -2,8 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: db
+  namespace: production
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: db
@@ -23,14 +24,14 @@ spec:
                   key: POSTGRES_DB
             - name: POSTGRES_USER
               valueFrom:
-                configMapKeyRef:
-                  name: db
-                  key: POSTGRES_USER
+                secretKeyRef:
+                  name: node-kit
+                  key: DB_USERNAME
             - name: POSTGRES_PASSWORD
               valueFrom:
-                configMapKeyRef:
-                  name: db
-                  key: POSTGRES_PASSWORD
+                secretKeyRef:
+                  name: node-kit
+                  key: DB_PASSWORD
           resources:
             limits:
               memory: "128Mi"
