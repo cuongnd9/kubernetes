@@ -4,13 +4,13 @@ metadata:
   name: node-kit
   namespace: production
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   rules:
     - host: 103cuong.example
       http:
         paths:
-          - path: /node-kit
+          - path: /node-kit(/|$)(.*)
             backend:
               serviceName: node-kit
               servicePort: 9000
