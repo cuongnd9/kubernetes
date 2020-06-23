@@ -1,0 +1,17 @@
+.DS_Store
+node_modules
+.env
+.tmp
+.idea
+npm-debug.log
+#vim
+*.swp
+docs
+out
+*.swo
+.environment
+dist
+coverage
+.nyc_output
+doc
+*logs
