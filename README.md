@@ -33,3 +33,4 @@ Kubernetes from 💩 zero to 👻 hero.
 - [Example: Deploying WordPress and MySQL with Persistent Volumes](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
 - [Storing data into Persistent Volumes on Kubernetes](https://medium.com/@xcoulon/storing-data-into-persistent-volumes-on-kubernetes-fb155da16666)
 - [Tutorial – Kubernetes Persistent Volumes](https://portworx.com/tutorial-kubernetes-persistent-volumes/)
+- [Deploying a multi-container application to Azure Kubernetes Services](https://azuredevopslabs.com/labs/vstsextend/kubernetes/)
