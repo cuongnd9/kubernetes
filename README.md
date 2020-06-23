@@ -26,3 +26,4 @@ Kubernetes from 🌱 zero to 🌲 hero
 - [React, Express, Node Js, and MongoDB (MERN Stack) microservices-based application deployment on Kubernetes](https://itnext.io/react-express-node-js-and-mongodb-mern-stack-microservices-based-application-deployment-on-ec4607cec74d)
 - [kompose user guide](https://github.com/kubernetes/kompose/blob/master/docs/user-guide.md)
 - [Set up Ingress on Minikube with the NGINX Ingress Controller](https://kubernetes.cn/docs/tasks/access-application-cluster/ingress-minikube/)
+- [Horizontal Pod Autoscaler Walkthrough](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/#create-horizontal-pod-autoscaler)
