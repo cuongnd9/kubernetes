@@ -1,6 +1,6 @@
 # kubernetes
 
-Kubernetes from 🌱 zero to 🌲 hero
+Kubernetes from 💩 zero to 👻 hero.
 
 ![kubernetes-architecture](./images/kubernetes-architecture.webp)
 
@@ -27,3 +27,4 @@ Kubernetes from 🌱 zero to 🌲 hero
 - [kompose user guide](https://github.com/kubernetes/kompose/blob/master/docs/user-guide.md)
 - [Set up Ingress on Minikube with the NGINX Ingress Controller](https://kubernetes.cn/docs/tasks/access-application-cluster/ingress-minikube/)
 - [Horizontal Pod Autoscaler Walkthrough](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/#create-horizontal-pod-autoscaler)
+- [Kubernetes Networking Guide for Beginners](https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-networking-guide-beginners.html)
