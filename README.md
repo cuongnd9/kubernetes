@@ -4,7 +4,7 @@ Kubernetes from 💩 zero to 👻 hero.
 
 ![kubernetes-architecture](./images/kubernetes-architecture.webp)
 
-![volume](./volume.png)
+![volume](./images/volume.png)
 
 ## Installation
 
