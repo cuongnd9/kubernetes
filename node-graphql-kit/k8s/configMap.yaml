@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: node-graphql-kit
+data:
+  nodeEnv: development
+  port: "9000"
+  pgHost: 127.0.0.1
+  pgPort: "5432"
+  pgDB: postgres
+  pgUser: postgres
+  pgPassword: evd7(BdfYkit!*C

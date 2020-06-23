@@ -1,0 +1,83 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-graphql-kit
+spec:
+  selector:
+    matchLabels:
+      app: node-graphql-kit
+  template:
+    metadata:
+      labels:
+        app: node-graphql-kit
+    spec:
+      containers:
+        - name: myservice
+          image: 103cuong/node-graphql-kit
+          imagePullPolicy: Always
+          env:
+            - name: NODE_ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: node-graphql-kit
+                  key: nodeEnv
+            - name: PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: node-graphql-kit
+                  key: port
+            - name: PG_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: node-graphql-kit
+                  key: pgHost
+            - name: PG_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: node-graphql-kit
+                  key: pgPort
+            - name: PG_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: node-graphql-kit
+                  key: pgDB
+            - name: PG_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: node-graphql-kit
+                  key: pgUser
+            - name: PG_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: node-graphql-kit
+                  key: pgPassword
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 9000
+        - name: db
+          image: postgres:10.3
+          env:
+            - name: POSTGRES_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: node-graphql-kit
+                  key: pgDB
+            - name: POSTGRES_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: node-graphql-kit
+                  key: pgUser
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: node-graphql-kit
+                  key: pgPassword
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 5432

@@ -1,5 +1,5 @@
 import joi from 'joi';
-import { flow, flatten } from 'lodash';
+import { flow } from 'lodash';
 import { SchemaValidationError } from './errors';
 
 export const middleware = (...parameters) => (obj, args, context, info) => {
