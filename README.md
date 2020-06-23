@@ -4,8 +4,6 @@ Kubernetes from 💩 zero to 👻 hero.
 
 ![kubernetes-architecture](./images/kubernetes-architecture.webp)
 
-![volume](./images/volume.png)
-
 ## Installation
 
 - [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux)
