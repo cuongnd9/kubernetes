@@ -14,3 +14,7 @@ spec:
             backend:
               serviceName: node-kit
               servicePort: 9000
+          - path: /db
+            backend:
+              serviceName: db
+              servicePort: 5432

@@ -1,7 +1,5 @@
 import express from 'express';
 import { celebrate, Joi } from 'celebrate';
-import { checkRole } from '../components/middlewares';
-import { roles } from '../components/constants';
 import Controller from '../controllers/cat.controller';
 
 const router = express.Router();
@@ -9,7 +7,6 @@ const controller = new Controller();
 
 router.get(
   '/',
-  checkRole(roles.admin, roles.manager, roles.staff),
   celebrate({
     query: {
       skip: Joi.number()
@@ -25,12 +22,11 @@ router.get(
 
 router.post(
   '/',
-  checkRole(roles.admin, roles.manager, roles.staff),
   celebrate({
     body: {
-      name: Joi.string(),
-      color: Joi.string(),
-      image: Joi.string(),
+      name: Joi.string().required(),
+      color: Joi.string().required(),
+      image: Joi.string().required(),
     },
   }),
   controller.action('create'),

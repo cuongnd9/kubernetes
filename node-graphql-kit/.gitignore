@@ -10,9 +10,8 @@ docs
 out
 *.swo
 .environment
-dist
+build
 coverage
 .nyc_output
 doc
 *logs
-build
