@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: myapp
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+    # - host: 103cuong.example
+    - host: a4pet-clus-4petsocial-3ecffa-b25f0c40.hcp.southeastasia.azmk8s.io
+      http:
+        paths:
+          - path: /api(/|$)(.*)
+            backend:
+              serviceName: myapp
+              servicePort: 9000
