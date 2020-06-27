@@ -48,9 +48,25 @@ kubectl apply -f https://raw.githubusercontent.com/103cuong/kubernetes/master/no
 kubectl apply -f https://raw.githubusercontent.com/103cuong/kubernetes/master/nodejs/k8s/ingress.yaml
 ```
 
+### Not important
+
+#### Install nginx-ingress for Azure Kubernetes
+
+```sh
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud/deploy.yaml
+```
+
+#### Create a static IP address
+
+```sh
+az network public-ip create --resource-group 4pet.social --name 4pet-ip --sku Standard --allocation-method static
+az network public-ip show --resource-group 4pet.social --name 4pet-ip --query ipAddress --output tsv
+```
+
 ## Documents
 
 - [Install Azure CLI on macOS](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-macos?view=azure-cli-latest)
 - [Install Azure CLI with apt](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt?view=azure-cli-latest)
 - [Zero to Kubernetes on Azure](https://medium.com/ingeniouslysimple/zero-to-kubernetes-on-azure-a2628b5a2dc4)
 - [How to Deploy an Azure Kubernetes Cluster with AKS](https://logz.io/blog/azure-kubernetes-cluster-aks/)
+- [Use a static public IP address and DNS label with the Azure Kubernetes Service (AKS) load balancer](https://docs.microsoft.com/en-us/azure/aks/static-ip)
