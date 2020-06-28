@@ -3,7 +3,7 @@ const connectionOptions = {
   host:
     process.env.NODE_ENV === 'test'
       ? process.env.TEST_DB_HOST
-      : process.env.DB_SERVICE_HOST || process.env.DB_HOST,
+      : process.env.DB_HOST,
   port:
     process.env.NODE_ENV === 'test'
       ? process.env.TEST_DB_PORT
