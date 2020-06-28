@@ -5,3 +5,4 @@ metadata:
   namespace: production
 data:
   POSTGRES_DB: node-app
+  DB_HOST: db.production.svc.cluster.local

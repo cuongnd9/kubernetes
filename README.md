@@ -32,3 +32,4 @@ Kubernetes from 💩 zero to 👻 hero.
 - [Storing data into Persistent Volumes on Kubernetes](https://medium.com/@xcoulon/storing-data-into-persistent-volumes-on-kubernetes-fb155da16666)
 - [Tutorial – Kubernetes Persistent Volumes](https://portworx.com/tutorial-kubernetes-persistent-volumes/)
 - [Deploying a multi-container application to Azure Kubernetes Services](https://azuredevopslabs.com/labs/vstsextend/kubernetes/)
+- [DNS for Services and Pods](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)

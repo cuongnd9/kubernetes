@@ -16,6 +16,7 @@ spec:
       containers:
       - name: node-kit
         image: 103cuong/node-kit
+        imagePullPolicy: Always
         env:
           - name: PORT
             valueFrom:
@@ -24,8 +25,8 @@ spec:
                 key: PORT
           - name: DB_HOST
             valueFrom:
-              secretKeyRef:
-                name: node-kit
+              configMapKeyRef:
+                name: db
                 key: DB_HOST
           - name: DB_PORT
             valueFrom:
