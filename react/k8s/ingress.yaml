@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: react-app
+spec:
+  rules:
+    - host: uit.social
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: react-app
+              servicePort: 80

@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:12 as builder
 
 WORKDIR /app
 
@@ -13,8 +13,8 @@ ENV NODE_ENV=production
 
 RUN yarn build
 
-RUN yarn global add serve
+FROM nginx:1.15
 
-EXPOSE 9000
+COPY --from=builder /app/build/ /usr/share/nginx/html
 
-CMD ["serve", "-s", "build", "-p", "9000"]
+EXPOSE 80
