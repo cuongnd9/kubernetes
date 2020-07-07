@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: react-app
 spec:
+  replicas: 2
   selector:
     matchLabels:
       app: react-app
@@ -12,11 +13,12 @@ spec:
         app: react-app
     spec:
       containers:
-      - name: react-app
-        image: 103cuong/react-app:latest
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
-        ports:
-        - containerPort: 9000
+        - name: react-app
+          image: 103cuong/react-app:latest
+          imagePullPolicy: Always
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 80
