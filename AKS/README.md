@@ -43,24 +43,19 @@ az aks get-credentials --name 4pet-cluster --resource-group 4pet.social
 ### Deploy an application
 
 ```sh
-kubectl apply -f https://raw.githubusercontent.com/103cuong/kubernetes/master/nodejs/k8s/deployment.yaml
-kubectl apply -f https://raw.githubusercontent.com/103cuong/kubernetes/master/nodejs/k8s/service.yaml
-kubectl apply -f https://raw.githubusercontent.com/103cuong/kubernetes/master/nodejs/k8s/ingress.yaml
+./deploy.sh
 ```
 
-### Not important
-
-#### Install nginx-ingress for Azure Kubernetes
+### Install nginx-ingress for Azure Kubernetes
 
 ```sh
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud/deploy.yaml
 ```
 
-#### Create a static IP address
+### Check deploy is working
 
 ```sh
-az network public-ip create --resource-group 4pet.social --name 4pet-ip --sku Standard --allocation-method static
-az network public-ip show --resource-group 4pet.social --name 4pet-ip --query ipAddress --output tsv
+curl http://uit.social/api
 ```
 
 ## Documents
