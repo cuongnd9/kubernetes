@@ -9,11 +9,6 @@ Kubernetes from 💩 zero to 👻 hero.
 - [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux)
 - [Install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
 
-## Steps
-
-- [Hello Minikube](./hello_minikube)
-- [Learn Kubernetes Basics](./kubernetes_basics)
-
 ## Documents
 
 - [Giới thiệu về Kubernetes, khái niệm cơ bản và thực hành ngay trên trình duyệt Web](https://medium.com/vinid/gi%E1%BB%9Bi-thi%E1%BB%87u-v%E1%BB%81-kubernetes-kh%C3%A1i-ni%E1%BB%87m-c%C6%A1-b%E1%BA%A3n-v%C3%A0-th%E1%BB%B1c-h%C3%A0nh-ngay-tr%C3%AAn-tr%C3%ACnh-duy%E1%BB%87t-web-8fbea30053e7)
