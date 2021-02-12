@@ -1,13 +1,42 @@
-# helm
+# k8s
 
-## PENDING ...
+k8s 🤝 4pet
 
+## Required tools
+
+- [helm](https://helm.sh/docs/intro/install/)
 ```sh
-helm create hello-world
-helm lint ./hello-world 
+$ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+$ chmod 700 get_helm.sh
+$ ./get_helm.sh
+```
+- [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- [gcloud](https://cloud.google.com/sdk/docs/quickstart)
+- [k9s](https://github.com/derailed/k9s)
+
+## Documents
+
+- [Managing Apps on GKE Using Helm](https://thecloud.christmas/2019/16)
+
+## Quick steps
+
+### To startup and deploy helm:
+```bash
+sh startup.sh
+sh add_helm.sh
 ```
 
-- [Sơ lược về Kubernetes Helm](https://medium.com/@dugiahuy/kubernetes-helm-101-88074e2b76d9)
-- [Your first Kubernetes app using Helm](https://medium.com/faun/your-first-kubernetes-app-using-helm-de781a710bec)
-- [Using Helm and Kubernetes](https://www.baeldung.com/kubernetes-helm)
-- [Docker, Kubernetes, and Helm](https://medium.com/better-programming/docker-kubernetes-and-helm-4b5a5a87bc8f)
+### Steps:
+
+```bash
+helm package simple-node-app
+helm install simple-node-app helm-0.2.0.tgz
+kubectl logs simple-node-app-helm-577569695f-hcrsz
+kubectl get pods
+kubectl get svc
+```
+
+### To Teardown:
+```bash
+sh teardown.sh
+```
